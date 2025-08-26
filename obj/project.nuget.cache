@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "dgSpecHash": "NqriJFQ31KlS7GkfwqN/WBw7VGDYxjFS0muM0u6R137jK7E4j3F1p8fUQRZ9QZSpGjHWaiR+mUjyjPkCo8Jt4g==",
+  "success": true,
+  "projectFilePath": "/home/rly907/Projects/Terminal/Terminal.csproj",
+  "expectedPackageFiles": [
+    "/home/rly907/.nuget/packages/colorhelper/1.8.1/colorhelper.1.8.1.nupkg.sha512",
+    "/home/rly907/.nuget/packages/jetbrains.annotations/2024.3.0/jetbrains.annotations.2024.3.0.nupkg.sha512",
+    "/home/rly907/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/9.0.2/microsoft.extensions.dependencyinjection.abstractions.9.0.2.nupkg.sha512",
+    "/home/rly907/.nuget/packages/microsoft.extensions.logging.abstractions/9.0.2/microsoft.extensions.logging.abstractions.9.0.2.nupkg.sha512",
+    "/home/rly907/.nuget/packages/system.diagnostics.diagnosticsource/9.0.2/system.diagnostics.diagnosticsource.9.0.2.nupkg.sha512",
+    "/home/rly907/.nuget/packages/system.io.abstractions/22.0.11/system.io.abstractions.22.0.11.nupkg.sha512",
+    "/home/rly907/.nuget/packages/terminal.gui/2.0.0-develop.4533/terminal.gui.2.0.0-develop.4533.nupkg.sha512",
+    "/home/rly907/.nuget/packages/testableio.system.io.abstractions/22.0.11/testableio.system.io.abstractions.22.0.11.nupkg.sha512",
+    "/home/rly907/.nuget/packages/testableio.system.io.abstractions.wrappers/22.0.11/testableio.system.io.abstractions.wrappers.22.0.11.nupkg.sha512",
+    "/home/rly907/.nuget/packages/testably.abstractions.filesystem.interface/9.0.0/testably.abstractions.filesystem.interface.9.0.0.nupkg.sha512",
+    "/home/rly907/.nuget/packages/wcwidth/2.0.0/wcwidth.2.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
