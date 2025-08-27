@@ -13,11 +13,14 @@ public class ExampleWindow : Window {
     public static string StreamCode { get; set; }
     public static string StreamUrl {get; set;}
 
+    private static LibVLC _libVLC;
+    private static MediaPlayer _mediaPlayer;
+
     public ExampleWindow(){
 
         Core.Initialize();
-        using var libVLC = new LibVLC();
-        using var mediaPlayer = new MediaPlayer(libVLC);
+        _libVLC = new LibVLC();
+        _mediaPlayer = new MediaPlayer(_libVLC);
 
 
         Title = $"Example ({Application.QuitKey} To Exit)";
@@ -41,15 +44,21 @@ public class ExampleWindow : Window {
         BtnStream.Accepting += (s, e) =>
         {
             StreamCode = InputCode.Text;
-            MessageBox.Query ("Starting Stream...", $"Streaming {StreamCode}", "Ok");
             StreamUrl = $"https://radio.garden/api/ara/content/listen/{StreamCode}/channel.mp3";
-
-            using var media = new Media(libVLC, StreamUrl, FromType.FromLocation);
-            mediaPlayer.Play(media);
-
-            Console.WriteLine (StreamUrl);
+            StreamMp3Url(StreamUrl);
+            Thread.Sleep(500);
+            MessageBox.Query ("Starting Stream...", $"Streaming {StreamCode}", "Ok");
             e.Handled = true;
         };
     Add (InputCode,BtnStream);
+    }
+
+    public static void StreamMp3Url(string url)
+    {
+        if (_libVLC == null || _mediaPlayer == null)
+            throw new InvalidOperationException("VLC not initialized. Call InitializeVLC first.");
+
+        using var media = new Media(_libVLC, url, FromType.FromLocation);
+        _mediaPlayer.Play(media);
     }
 }
